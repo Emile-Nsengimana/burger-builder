@@ -42,8 +42,12 @@ const BurgerBuilder = props => {
         setCheckout(currentPrice > 0);
     }
 
-    const handleShowModal = () => {
+    const handleOrder = () => {
         setShowModal(true);
+    }
+
+    const handleCancelOrder = () => {
+        setShowModal(false);
     }
 
     const disabledControls =  { ...ingredients };
@@ -52,7 +56,7 @@ const BurgerBuilder = props => {
     return (
         <>
             <Burger ingredients={ingredients} />
-            <Modal show={showModal}>
+            <Modal show={showModal} cancelOrder={handleCancelOrder}>
                 <OrderSummary ingredients={ingredients} />
             </Modal>
             <BuildControls 
@@ -60,7 +64,7 @@ const BurgerBuilder = props => {
                 removeIngredient={handleRemoveIngredient}
                 disabledControls={disabledControls}
                 totalPrice={totalPrice}
-                showModal={handleShowModal}
+                order={handleOrder}
                 checkout={!checkout}
             />
         </>

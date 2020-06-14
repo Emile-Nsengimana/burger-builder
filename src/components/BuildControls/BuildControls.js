@@ -13,7 +13,7 @@ const BuildControls = props => {
 
     return(
        <div className='build-controls'>
-           <div>Total price: <strong>{props.totalPrice}</strong></div>
+           <div>Total price: <strong>{props.totalPrice}</strong> Rwf</div>
            { CONTROLS.map(control => 
             <BuildControl
                 key={control.type}
@@ -27,7 +27,7 @@ const BuildControls = props => {
             )}
             <button 
                 disabled={props.checkout}  
-                onClick={props.showModal}
+                onClick={props.order}
             >
             Order now</button>
        </div>
