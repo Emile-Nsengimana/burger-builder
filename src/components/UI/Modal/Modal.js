@@ -1,6 +1,6 @@
 import React from 'react';
 import './Modal.css'
-import BackDrop from '../../Layout/BackDrop/BackDrop';
+import BackDrop from '../BackDrop/BackDrop';
 
 const Modal = props => {
 

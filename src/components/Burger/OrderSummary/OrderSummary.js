@@ -2,7 +2,7 @@ import React from 'react';
 import './OrderSummary.css'
 
 const OrderSummary = props => {
-    const orderSum = Object.keys(props.ingredients)
+    const ingredientSummary = Object.keys(props.ingredients)
                     .map((ingredient) => (
                         <li key={ingredient}>
                             {ingredient}: {props.ingredients[ingredient]}
@@ -11,9 +11,13 @@ const OrderSummary = props => {
 
     return(
         <>
-            <h4>Your order</h4>
-            <ul>{orderSum}</ul>
-            <p>Continue to checkout</p>
+            <h3>Your order</h3>
+            <h3>Ingredients:</h3>
+            <ul className='list'>{ingredientSummary}</ul>
+            <p><strong>Total price: {props.totalPrice}</strong> Rwf</p>
+            <p>Continue to checkout?</p>
+            <button className='btn btn-danger' onClick={props.cancelOrder}>Cancel</button>
+            <button className='btn btn-success'>Continue</button>
         </>
     );
 }

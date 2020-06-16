@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/BuildControls/BuildControls';
-import Modal  from '../../components/Layout/Modal/Modal';
+import Modal  from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const INGREDIENTS = {
@@ -57,7 +58,11 @@ const BurgerBuilder = props => {
         <>
             <Burger ingredients={ingredients} />
             <Modal show={showModal} cancelOrder={handleCancelOrder}>
-                <OrderSummary ingredients={ingredients} />
+                <OrderSummary 
+                    ingredients={ingredients} 
+                    cancelOrder={handleCancelOrder}
+                    totalPrice={totalPrice}
+                />
             </Modal>
             <BuildControls 
                 addIngredient={handleAddIngredient} 
