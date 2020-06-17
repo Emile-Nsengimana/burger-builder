@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Modal.css'
 import BackDrop from '../BackDrop/BackDrop';
 
 const Modal = props => {
-
+useEffect(() => {
+},[props.show])
     return (
         <>
-            <BackDrop show={props.show} cancelOrder={props.cancelOrder}/>
+            <BackDrop show={props.show} clicked={props.cancelOrder}/>
             <div className='modal'
                 style={{
                     transform: props.show ? 'translateY(0)' : 'translateY(-100vh)'

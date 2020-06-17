@@ -1,10 +1,11 @@
 import React from 'react';
 import './NavigationItems.css';
+import NavigationItem from '../NavigationItem/NavigationItem';
 
 const NavigationItems = props => (
     <ul className='navigation-items'>
-        <li className='navigation-item active'><a href='#'>Link</a></li>
-        <li className='navigation-item'><a href='#'>Link</a></li>
+        <NavigationItem active link='#'>Burger Builder</NavigationItem>
+        <NavigationItem link='#'>Checkout</NavigationItem>
     </ul>
 )
 
