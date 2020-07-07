@@ -4,6 +4,9 @@ import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/BuildControls/BuildControls';
 import Modal  from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
+import Checkout from '../Checkout/Checkout';
+import axios from 'axios';
+
 
 const INGREDIENTS = {
     salad: 200,
@@ -51,6 +54,24 @@ const BurgerBuilder = props => {
         setShowModal(false);
     }
 
+    const handleCheckout = async() => {
+        const order = {
+            ingredients,
+            customer: {
+                name: 'Emile N.',
+                address: {
+                    country: 'Rwanda',
+                    city: 'Kicukiro',
+                    street: 'KK 270st'
+                },
+                email: 'emile@gmail.com'
+            },
+            deliveryMethod: 'premium'
+        }
+        const orderBurger = await axios.post('https://burger-app-39bda.firebaseio.com/orders.json', order);
+        console.log(orderBurger);
+    }
+
     const disabledControls =  { ...ingredients };
     for(let ctrl in disabledControls) disabledControls[ctrl] = disabledControls[ctrl] <= 0;
     
@@ -62,6 +83,7 @@ const BurgerBuilder = props => {
                     ingredients={ingredients} 
                     cancelOrder={handleCancelOrder}
                     totalPrice={totalPrice}
+                    checkout={handleCheckout}
                 />
             </Modal>
             <BuildControls 
@@ -72,6 +94,7 @@ const BurgerBuilder = props => {
                 order={handleOrder}
                 checkout={!checkout}
             />
+            <Checkout ingredients={ingredients} />
         </>
     );
 }

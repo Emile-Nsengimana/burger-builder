@@ -1,0 +1,11 @@
+.checkout-box{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    .checkout-box{
+        width: 500px;
+    }
+}
