@@ -1,25 +1,25 @@
 .burger {
     width: 100%;
     margin: auto;
-    height: 270px;
+    padding: 10px;
+    height: 261px;
     overflow: auto;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
-    /* border: 1px solid green; */
 }
 
 @media (min-width: 500px) and (min-height: 400px) {
     .burger {
         width: 350px;
-        height: 270px;
+        height: 255px;
     }
 }
 
 @media (min-width: 500px) and (min-height: 401px) {
     .burger {
         width: 450px;
-        height: 280px;
+        height: 261px;
     }
 }
 

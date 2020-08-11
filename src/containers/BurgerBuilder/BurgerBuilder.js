@@ -4,7 +4,8 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
-import axios from "axios";
+// import axios from "axios";
+import qs from 'qs';
 
 const INGREDIENTS = {
   salad: 200,
@@ -53,10 +54,9 @@ const BurgerBuilder = (props) => {
   };
 
   const handleCheckout = async () => {
-      console.log(props);
     props.history.push({
-        pathname: '/checkout',
-        search: 'ingredients'
+      pathname: '/checkout',
+      search: qs.stringify(ingredients)
     });
     // const order = {
     //   ingredients,
