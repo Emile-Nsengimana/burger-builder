@@ -1,0 +1,19 @@
+.card-header {
+  background-color: #d39952 !important;
+}
+#card {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.btn-cl {
+  background-color: #d39952 !important;
+  border: 1px solid transparent !important;
+}
+
+.btn-cl:hover {
+  background-color: transparent !important;
+  color: #d39952 !important;
+  border: 1px solid #d39952 !important;
+}

@@ -1,0 +1,13 @@
+.badge {
+  margin: 7px;
+}
+
+.orders {
+  height: 88vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.orders::-webkit-scrollbar {
+  display: none;
+}
