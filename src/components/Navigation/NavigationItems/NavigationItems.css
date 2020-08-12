@@ -8,7 +8,6 @@
     height: 100%;
 }
 
-
 @media(min-width: 500px){
     .navigation-items{
         flex-flow: row;

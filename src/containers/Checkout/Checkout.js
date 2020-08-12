@@ -11,14 +11,14 @@ const Checkout = props => {
         ...qs.parse(queryParms.replace('?', ''))
     });
     Object.entries(ingredients).forEach(v => ingredients[v[0]] = v[1] * 1);
-console.log(ingredients);
+    console.log(ingredients);
     return (
         <div className='checkout-box'>
             <h3>Hope it's delicious</h3>
             <Burger ingredients={ingredients} />
             <div className='btn-group'>
-            <button className='btn btn-danger' onClick={() => props.history.goBack()}>Cancel</button>
-            <button className='btn btn-success' onClick={() => props.history.replace('/checkout/contact-info')}>Continue</button>
+                <button className='btn btn-danger' onClick={() => props.history.goBack()}>Cancel</button>
+                <button className='btn btn-success' onClick={() => props.history.replace('/checkout/contact-info')}>Continue</button>
             </div>
             <Route path={props.match.path + '/contact-info'} component={ContactInfo} />
         </div>

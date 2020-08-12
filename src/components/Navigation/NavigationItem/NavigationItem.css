@@ -6,17 +6,18 @@
 }
 
 .navigation-item a{
-    color: #8F5C2C;
-    text-decoration: none;
+    color: #8F5C2C !important;
+    text-decoration: none !important;
     width: 100%;
     box-sizing: border-box;
     display: block;
 }
 
-navigation-item a:hover,
-navigation-item a:active,
-navigation-item a .active{
-    color: #40A4C8;
+.navigation-item a:hover,
+.navigation-item a:active,
+.navigation-item .active{
+    color: chocolate;
+    border-bottom: 2px solid chocolate;
 }
 
 @media(min-width: 500px){
