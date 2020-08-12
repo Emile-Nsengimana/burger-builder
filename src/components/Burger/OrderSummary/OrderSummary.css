@@ -1,49 +1,48 @@
-.list{
-    list-style: none;
-    font-size: 12px;
-    border-bottom: 1px solid grey;
+.list {
+  list-style: none;
+  font-size: 12px;
+  border-bottom: 1px solid grey;
 }
 
-
-.list li{
-   margin: 5px;
-   text-transform: capitalize;
+.list li {
+  margin: 5px;
+  text-transform: capitalize;
 }
 
-.btn{
-    margin: 5px;
-    padding: 5px 10px;
-    outline: none;
-    border-radius: 12px;
-    border-style: none;
-    color: whitesmoke;
-    cursor: pointer;
+.btn {
+  margin: 5px;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 12px;
+  border-style: none;
+  color: whitesmoke;
+  cursor: pointer;
 }
 
-.btn-danger{
-    background-color: rgba(255, 7, 7, 0.925);
-    border: 1px solid rgba(255, 7, 7, 0.925);
+.btn-danger {
+  background-color: rgba(255, 7, 7, 0.925);
+  border: 1px solid rgba(255, 7, 7, 0.925);
 }
 
-.btn-success{
-    background-color: green;
-    border: 1px solid green;
+.btn-success {
+  background-color: green;
+  border: 1px solid green;
 }
 
-.btn-danger:hover{
-    color: rgba(255, 7, 7, 0.925);
-    background-color: transparent;
-    border: 1px solid rgba(255, 7, 7, 0.925);
+.btn-danger:hover {
+  color: rgba(255, 7, 7, 0.925);
+  background-color: transparent;
+  border: 1px solid rgba(255, 7, 7, 0.925);
 }
 
-.btn-success:hover{
-    color: green;
-    background-color: transparent;
-    border: 1px solid green;
+.btn-success:hover {
+  color: green;
+  background-color: transparent;
+  border: 1px solid green;
 }
 
-.left{
-   text-align: right;
-   top: 0;
-   right: 0;
+.left {
+  text-align: right;
+  top: 0;
+  right: 0;
 }

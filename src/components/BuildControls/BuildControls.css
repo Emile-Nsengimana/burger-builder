@@ -1,10 +1,9 @@
-
 .build-controls {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 100%;
-    background-color: chocolate;
-    margin: auto;
-    padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  background-color: chocolate;
+  margin: auto;
+  padding: 10px 0;
 }
